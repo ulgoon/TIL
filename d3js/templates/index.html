@@ -4,10 +4,17 @@
   <title>D3 with flask</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- static serve -->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='src/css/style.css') }}">
+  <!-- d3 -->
+  <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
  </head>
  <body>
-  <h1>Home</h1>
   <p>Hi D3 and Flask!!</p>
+  <script>
+    d3.select('body')
+        .append('h1')
+        .text('home');
+  </script>
  </body>
 </html>

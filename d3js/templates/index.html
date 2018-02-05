@@ -21,7 +21,13 @@
   <div id="listbox3">C</div>
   <div id="listbox4">D</div>
   <script>
-    d3.selectAll('div').style('background-color','black');
+    d3.selectAll('div')
+        .style('background-color', function(d,i){
+            return (i % 2 == 0) ? "black":"white";
+        })
+        .style('color', function(d,i){
+            return (i % 2 == 0) ? "white":"black";
+        });
   </script>
  </body>
 </html>
